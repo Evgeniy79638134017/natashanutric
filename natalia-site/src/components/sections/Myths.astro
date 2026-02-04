@@ -1,0 +1,53 @@
+---
+const myths = [
+  {
+    question: 'Нужно есть часто и много',
+    answer:
+      'Дробное питание важнее количества. Наталья с супругом питаются 2 раза в день + протеиновый коктейль — и чувствуют себя отлично.',
+  },
+  {
+    question: 'Без подсчёта калорий не похудеть',
+    answer:
+      'Клеточное питание позволяет снижать вес без калькулятора. Когда клетки получают всё необходимое, организм сам регулирует аппетит.',
+  },
+  {
+    question: 'Нужно жёстко сидеть на диете',
+    answer:
+      'Менее стрессовый подход даёт устойчивый результат. Жёсткие ограничения приводят к срывам, а мягкие изменения привычек — к долгосрочному здоровью.',
+  },
+];
+---
+
+<section class="bg-bg-alt py-16 md:py-24">
+  <div class="mx-auto max-w-3xl px-4 lg:px-8">
+    <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+      Мифы о питании, в&nbsp;которые пора перестать верить
+    </h2>
+
+    <div class="mt-12 flex flex-col gap-4">
+      {myths.map(({ question, answer }, i) => (
+        <details
+          class="group rounded-2xl bg-white shadow-md"
+          data-myth
+        >
+          <summary class="flex cursor-pointer items-center gap-4 px-6 py-5 [&::-webkit-details-marker]:hidden list-none">
+            <span class="h-full w-1 shrink-0 self-stretch rounded-full bg-primary"></span>
+            <span class="flex-1 font-[Montserrat] text-lg font-semibold text-primary-dark">
+              {question}
+            </span>
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform group-open:rotate-45">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-5 pl-11">
+            <p class="text-sm leading-relaxed text-text-light">
+              {answer}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
