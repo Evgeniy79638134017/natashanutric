@@ -32,7 +32,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body class="bg-bg text-text min-h-screen">
+  <body class="bg-bg text-text min-h-screen overflow-x-hidden">
     <slot />
   </body>
 </html>
