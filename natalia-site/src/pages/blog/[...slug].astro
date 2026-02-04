@@ -1,0 +1,70 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import CTA from '../../components/sections/CTA.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, date, tags } = entry.data;
+
+function formatDate(d: Date): string {
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(d);
+}
+---
+
+<BaseLayout title={`${title} — Блог Натальи Еременко`} description={description}>
+  <Header />
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="bg-bg-alt">
+      <div class="mx-auto max-w-7xl px-4 py-3 lg:px-8">
+        <nav class="flex items-center gap-2 text-sm text-text-light" aria-label="Хлебные крошки">
+          <a href="/" class="transition-colors hover:text-primary">Главная</a>
+          <span>/</span>
+          <a href="/blog" class="transition-colors hover:text-primary">Блог</a>
+          <span>/</span>
+          <span class="text-text">{title}</span>
+        </nav>
+      </div>
+    </div>
+
+    <article class="mx-auto max-w-3xl px-4 py-10 md:py-16 lg:px-8">
+      <time class="text-sm text-text-light" datetime={date.toISOString()}>
+        {formatDate(date)}
+      </time>
+
+      <h1 class="mt-2 font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        {title}
+      </h1>
+
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag: string) => (
+          <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-[Montserrat] prose-headings:text-primary-dark prose-a:text-primary">
+        <Content />
+      </div>
+    </article>
+
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>
