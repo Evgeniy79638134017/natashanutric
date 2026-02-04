@@ -1,0 +1,46 @@
+---
+const cards = [
+  {
+    emoji: '🔥',
+    title: 'Похудение',
+    description: 'Снижение веса без изнуряющих диет и подсчёта калорий',
+  },
+  {
+    emoji: '⚡',
+    title: 'Энергия',
+    description: 'Избавление от хронической усталости и восстановление сил',
+  },
+  {
+    emoji: '🧘',
+    title: 'Антистресс',
+    description: 'Снятие стресса и тревожности. Восстановление сна',
+  },
+  {
+    emoji: '🛡️',
+    title: 'Иммунитет',
+    description: 'Укрепление иммунной системы',
+  },
+];
+---
+
+<section id="specializations" class="bg-bg py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+      Чем я могу помочь
+    </h2>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {cards.map(({ emoji, title, description }) => (
+        <div class="rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+          <span class="text-4xl">{emoji}</span>
+          <h3 class="mt-4 font-[Montserrat] text-xl font-semibold text-primary-dark">
+            {title}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-text-light">
+            {description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
