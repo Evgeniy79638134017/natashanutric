@@ -1,9 +1,149 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+
+const principles = [
+  {
+    title: 'Осознанность',
+    description: 'Клиент сам заинтересован в изменении здоровья',
+  },
+  {
+    title: 'Доверие',
+    description: 'Показываю всё на личном примере',
+  },
+  {
+    title: 'Комплексный подход',
+    description: 'Питание + витамины + режим + сон',
+  },
+  {
+    title: 'Личный пример',
+    description: 'Спорт каждый день, ЗОЖ, без алкоголя',
+  },
+];
+
+const education = [
+  'Сертифицированный нутрициолог',
+  'МГУ, нутрициология (в процессе)',
+  'Партнёр компании Genes',
+  'Английский язык (для международных консультаций)',
+];
+
+const lifestyle = [
+  { emoji: '🏃', text: 'Спорт каждый день' },
+  { emoji: '🥗', text: 'Дробное питание' },
+  { emoji: '🚫', text: 'Без алкоголя' },
+  { emoji: '💊', text: 'Клеточное питание' },
+  { emoji: '👨‍👩‍👧‍👦', text: 'Вся семья на ЗОЖ' },
+];
 ---
 
-<PageLayout title="Об эксперте — Наталья Еременко" description="Нутрициолог-биохакер Наталья Еременко. Образование, опыт, подход к работе.">
-  <section class="flex items-center justify-center min-h-screen">
-    <h1 class="text-4xl font-bold text-primary">Об эксперте</h1>
+<PageLayout title="Об эксперте — Наталья Еременко, нутрициолог-биохакер" description="Нутрициолог-биохакер Наталья Еременко. Образование, опыт, принципы работы, личный пример здорового образа жизни.">
+
+  <!-- Секция 1: Заголовок -->
+  <section class="bg-gradient-to-b from-bg to-bg-alt py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 lg:gap-16 lg:px-8">
+      <div class="flex justify-center md:justify-start">
+        <div class="flex h-[450px] w-[350px] items-center justify-center rounded-3xl bg-bg-alt text-text-light shadow-lg">
+          <span class="text-lg">Фото Натальи</span>
+        </div>
+      </div>
+      <div>
+        <h1 class="font-[Montserrat] text-4xl font-bold text-primary-dark md:text-5xl">
+          Наталья Еременко
+        </h1>
+        <p class="mt-3 text-xl text-primary">Нутрициолог-биохакер</p>
+        <p class="mt-4 text-text-light">Благовещенск · Онлайн по всей России</p>
+      </div>
+    </div>
   </section>
+
+  <!-- Секция 2: Моя история -->
+  <section class="bg-bg py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4 lg:px-8">
+      <h2 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Мой путь в&nbsp;нутрициологию
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed text-text-light">
+        Меня привело в&nbsp;нутрициологию здоровье моей семьи. Ребёнок долго болел,
+        традиционные методы не&nbsp;помогали. Узнала о&nbsp;клеточном питании&nbsp;—
+        результат появился через несколько дней. Начала делиться знаниями
+        с&nbsp;окружающими и&nbsp;поняла, что нужно профессиональное образование.
+        Получила сертификат нутрициолога, поступила в&nbsp;МГУ.
+      </p>
+    </div>
+  </section>
+
+  <!-- Секция 3: Принципы работы -->
+  <section class="bg-bg-alt py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Принципы работы
+      </h2>
+      <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {principles.map(({ title, description }) => (
+          <div class="rounded-2xl bg-white p-6 shadow-md">
+            <h3 class="font-[Montserrat] text-lg font-semibold text-primary-dark">
+              {title}
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-light">
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция 4: Образование -->
+  <section class="bg-bg py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Образование и квалификация
+      </h2>
+      <div class="relative mt-12">
+        <div class="absolute bottom-0 left-4 top-0 w-0.5 bg-primary-light/40 md:left-1/2 md:-translate-x-px"></div>
+        <div class="flex flex-col gap-8">
+          {education.map((item, i) => (
+            <div class:list={[
+              'relative flex items-center gap-5',
+              'md:w-1/2',
+              i % 2 === 0 ? 'md:mr-auto md:pr-10' : 'md:ml-auto md:pl-10',
+            ]}>
+              <div class:list={[
+                'relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-md',
+                i % 2 === 0 ? 'md:order-last md:absolute md:-right-[18px]' : 'md:absolute md:-left-[18px]',
+              ]}>
+                {i + 1}
+              </div>
+              <div class:list={[
+                'rounded-xl bg-white px-5 py-4 shadow-md',
+                i % 2 === 0 ? 'md:text-right' : '',
+              ]}>
+                <p class="text-sm font-medium text-text">{item}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция 5: Образ жизни -->
+  <section class="bg-bg-alt py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Образ жизни
+      </h2>
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        {lifestyle.map(({ emoji, text }) => (
+          <div class="flex flex-col items-center gap-2 text-center">
+            <span class="text-4xl">{emoji}</span>
+            <span class="text-sm font-medium text-text">{text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA />
 </PageLayout>
