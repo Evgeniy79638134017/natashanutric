@@ -1,9 +1,58 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+import { cases } from '../data/cases';
 ---
 
-<PageLayout title="Кейсы клиентов — Наталья Еременко" description="Результаты клиентов после работы с нутрициологом.">
-  <section class="flex items-center justify-center min-h-screen">
-    <h1 class="text-4xl font-bold text-primary">Кейсы клиентов</h1>
+<PageLayout title="Результаты клиентов — нутрициолог Наталья Еременко" description="Реальные истории людей, которые изменили своё здоровье с помощью нутрициолога Натальи Еременко.">
+  <section class="bg-bg py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+      <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Результаты клиентов
+      </h1>
+      <p class="mt-3 text-lg text-text-light">
+        Реальные истории людей, которые изменили здоровье
+      </p>
+
+      <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        {cases.map(({ title, who, problem, process, result, duration }) => (
+          <div class="rounded-2xl bg-white p-6 shadow-md md:p-8">
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-4">
+              <h2 class="font-[Montserrat] text-2xl font-bold text-primary">
+                {title}
+              </h2>
+              <span class="shrink-0 rounded-full bg-bg-alt px-3 py-1 text-xs font-medium text-text-light">
+                {duration}
+              </span>
+            </div>
+
+            <span class="mt-2 inline-block rounded-full bg-primary-light/15 px-3 py-1 text-xs font-medium text-primary-dark">
+              {who}
+            </span>
+
+            <!-- Problem -->
+            <div class="mt-5 rounded-xl bg-bg-alt p-4">
+              <p class="text-xs font-semibold uppercase tracking-wider text-text-light">Проблема</p>
+              <p class="mt-1 text-sm leading-relaxed text-text">{problem}</p>
+            </div>
+
+            <!-- Process -->
+            <div class="mt-3">
+              <p class="text-xs font-semibold uppercase tracking-wider text-text-light">Что делали</p>
+              <p class="mt-1 text-sm leading-relaxed text-text-light">{process}</p>
+            </div>
+
+            <!-- Result -->
+            <div class="mt-3 rounded-xl bg-primary/5 p-4">
+              <p class="text-xs font-semibold uppercase tracking-wider text-primary">Результат</p>
+              <p class="mt-1 text-sm font-medium leading-relaxed text-primary-dark">{result}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </section>
+
+  <CTA />
 </PageLayout>
