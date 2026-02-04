@@ -1,0 +1,82 @@
+---
+const steps = [
+  {
+    number: 1,
+    title: 'Знакомство',
+    description: 'Бесплатная консультация 15 минут',
+  },
+  {
+    number: 2,
+    title: 'Анкета',
+    description: 'Подробная анкета о здоровье',
+  },
+  {
+    number: 3,
+    title: 'Разбор',
+    description: 'Детальный анализ ситуации (30–60 мин)',
+  },
+  {
+    number: 4,
+    title: 'Программа',
+    description: 'Индивидуальная программа + комплексы Genes',
+  },
+  {
+    number: 5,
+    title: 'Сопровождение',
+    description: 'Постоянная связь, корректировка',
+  },
+];
+---
+
+<section class="bg-bg-alt py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+      Как проходит работа
+    </h2>
+
+    <!-- Desktop: horizontal -->
+    <div class="relative mt-14 hidden lg:block">
+      <!-- Connecting line -->
+      <div class="absolute left-0 right-0 top-6 h-0.5 bg-primary-light/40"></div>
+
+      <div class="grid grid-cols-5 gap-4">
+        {steps.map(({ number, title, description }) => (
+          <div class="relative flex flex-col items-center text-center">
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white shadow-md">
+              {number}
+            </div>
+            <h3 class="mt-4 font-[Montserrat] text-base font-semibold text-primary-dark">
+              {title}
+            </h3>
+            <p class="mt-1 text-sm leading-relaxed text-text-light">
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Mobile: vertical -->
+    <div class="relative mt-10 lg:hidden">
+      <div class="absolute bottom-0 left-6 top-0 w-0.5 bg-primary-light/40"></div>
+
+      <div class="flex flex-col gap-8">
+        {steps.map(({ number, title, description }) => (
+          <div class="relative flex items-start gap-5">
+            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-white shadow-md">
+              {number}
+            </div>
+            <div>
+              <h3 class="font-[Montserrat] text-base font-semibold text-primary-dark">
+                {title}
+              </h3>
+              <p class="mt-1 text-sm leading-relaxed text-text-light">
+                {description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
