@@ -34,7 +34,7 @@ export default function ConsultationForm() {
     }
 
     const text = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/79001234567?text=${text}`, '_blank');
+    window.open(`https://t.me/eremka_nat?text=${text}`, '_blank');
     setSent(true);
   }
 
@@ -50,7 +50,7 @@ export default function ConsultationForm() {
           Спасибо!
         </h3>
         <p className="mt-2 text-[#888888]">
-          Сообщение отправлено в WhatsApp.
+          Сообщение отправлено в Telegram.
         </p>
         <button
           type="button"
@@ -91,7 +91,7 @@ export default function ConsultationForm() {
       {/* Phone */}
       <div className="mt-4">
         <label htmlFor="phone" className="block text-sm font-medium text-[#555555]">
-          Телефон / WhatsApp <span className="text-red-500">*</span>
+          Телефон / Telegram <span className="text-red-500">*</span>
         </label>
         <input
           id="phone"
@@ -165,7 +165,7 @@ export default function ConsultationForm() {
         type="submit"
         className="mt-6 w-full rounded-full bg-[#2E4A3A] py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#5EA882]"
       >
-        Отправить в WhatsApp
+        Отправить в Telegram
       </button>
     </form>
   );
