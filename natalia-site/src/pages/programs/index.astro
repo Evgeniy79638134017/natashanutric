@@ -1,9 +1,53 @@
 ---
+import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import ProgramFilter from '../../components/programs/ProgramFilter';
+
+const allPrograms = await getCollection('programs');
+const sorted = allPrograms.sort((a, b) => a.data.order - b.data.order);
+
+const programsData = sorted.map((p) => ({
+  id: p.id,
+  title: p.data.title,
+  description: p.data.description,
+  category: p.data.category,
+  duration: p.data.duration,
+  price: p.data.price,
+}));
 ---
 
-<PageLayout title="Программы здоровья — Наталья Еременко" description="Индивидуальные программы питания и здоровья от 30 до 180 дней.">
-  <section class="flex items-center justify-center min-h-screen">
-    <h1 class="text-4xl font-bold text-primary">Программы</h1>
+<PageLayout title="Программы здоровья — Наталья Еременко" description="Индивидуальные программы питания и здоровья от 30 до 180 дней с полным сопровождением.">
+  <section class="bg-bg py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8">
+      <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+        Программы здоровья
+      </h1>
+      <p class="mt-3 text-lg text-text-light">
+        Индивидуальные программы на 30–180 дней с сопровождением
+      </p>
+
+      <div class="mt-10">
+        <ProgramFilter programs={programsData} client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- Help section -->
+  <section class="bg-bg-alt py-16 md:py-20">
+    <div class="mx-auto max-w-3xl px-4 text-center lg:px-8">
+      <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark md:text-3xl">
+        Не знаете какую программу выбрать?
+      </h2>
+      <p class="mt-4 text-text-light">
+        Запишитесь на бесплатную консультацию — вместе разберёмся в вашей ситуации
+        и подберём подходящую программу
+      </p>
+      <a
+        href="/consultation"
+        class="mt-8 inline-block rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-primary-dark"
+      >
+        Бесплатная консультация
+      </a>
+    </div>
   </section>
 </PageLayout>
