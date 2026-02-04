@@ -6,6 +6,7 @@ import HowItWorks from '../components/sections/HowItWorks.astro';
 import CasesPreview from '../components/sections/CasesPreview.astro';
 import Myths from '../components/sections/Myths.astro';
 import CTA from '../components/sections/CTA.astro';
+import WaveDivider from '../components/WaveDivider.astro';
 ---
 
 <PageLayout title="Наталья Ерёменко — нутрициолог в Благовещенске" description="Комплексные программы восстановления здоровья на основе клеточного питания. Нутрициолог-биохакер Наталья Ерёменко, Благовещенск.">
@@ -39,9 +40,14 @@ import CTA from '../components/sections/CTA.astro';
     })} />
   </Fragment>
   <Hero />
+  <WaveDivider color="#FFFFFF" />
   <Specializations />
+  <WaveDivider color="#FFF8F2" />
   <HowItWorks />
+  <WaveDivider color="#FFFFFF" flip />
   <CasesPreview />
+  <WaveDivider color="#FFF8F2" />
   <Myths />
+  <WaveDivider color="#FDECD0" flip />
   <CTA />
 </PageLayout>

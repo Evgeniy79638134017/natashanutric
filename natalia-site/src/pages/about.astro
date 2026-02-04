@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+import WaveDivider from '../components/WaveDivider.astro';
 
 const principles = [
   {
@@ -56,6 +57,7 @@ const lifestyle = [
       </div>
     </div>
   </section>
+  <WaveDivider color="#FFFFFF" />
 
   <!-- Секция 2: Моя история -->
   <section class="bg-white py-16 md:py-24">
@@ -80,8 +82,8 @@ const lifestyle = [
         Принципы работы
       </h2>
       <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {principles.map(({ title, description }) => (
-          <div class="rounded-2xl bg-white p-6 shadow-md">
+        {principles.map(({ title, description }, i) => (
+          <div class={`animate-on-scroll animate-delay-${i + 1} rounded-2xl bg-white p-6 shadow-md transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lg`}>
             <h3 class="font-display text-lg font-semibold text-primary-dark">
               {title}
             </h3>
@@ -135,8 +137,8 @@ const lifestyle = [
         Образ жизни
       </h2>
       <div class="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
-        {lifestyle.map(({ emoji, text }) => (
-          <div class="flex flex-col items-center gap-2 text-center">
+        {lifestyle.map(({ emoji, text }, i) => (
+          <div class={`animate-on-scroll animate-delay-${i + 1} flex flex-col items-center gap-2 text-center`}>
             <span class="text-4xl">{emoji}</span>
             <span class="text-sm font-medium text-text md:text-base">{text}</span>
           </div>

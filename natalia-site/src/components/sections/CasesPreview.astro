@@ -25,8 +25,8 @@ const cases = [
     </h2>
 
     <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-      {cases.map(({ result, person, description }) => (
-        <div class="rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg">
+      {cases.map(({ result, person, description }, i) => (
+        <div class={`animate-on-scroll animate-delay-${i + 1} rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lg`}>
           <p class="font-display text-xl font-bold text-primary-dark md:text-2xl">
             {result}
           </p>

@@ -30,8 +30,8 @@ const cards = [
     </h2>
 
     <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {cards.map(({ emoji, title, description }) => (
-        <div class="rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg">
+      {cards.map(({ emoji, title, description }, i) => (
+        <div class={`animate-on-scroll animate-delay-${i + 1} rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lg`}>
           <span class="text-4xl">{emoji}</span>
           <h3 class="mt-4 font-display text-lg font-semibold text-primary-dark md:text-xl">
             {title}

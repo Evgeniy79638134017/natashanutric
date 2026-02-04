@@ -72,10 +72,13 @@ export default function ProgramFilter({ programs }: Props) {
         {filtered.map((program) => (
           <div
             key={program.id}
-            className="flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg"
+            className="group flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]"
           >
             <div className="flex items-start justify-between gap-3">
-              <h3 className="font-display text-lg font-semibold text-[#2E4A3A]">
+              <h3
+                className="font-display text-lg font-semibold text-[#2E4A3A]"
+                style={{ viewTransitionName: `program-${program.id}` }}
+              >
                 {program.title}
               </h3>
               <span
@@ -101,7 +104,7 @@ export default function ProgramFilter({ programs }: Props) {
 
             <a
               href={`/programs/${program.id}`}
-              className="mt-5 block rounded-full border-2 border-[#7CB59D] py-2.5 text-center text-sm font-semibold text-[#7CB59D] transition-all duration-300 hover:bg-[#7CB59D] hover:text-white"
+              className="mt-5 block rounded-full border-2 border-[#7CB59D] py-2.5 text-center text-sm font-semibold text-[#7CB59D] transition-all duration-300 hover:bg-[#7CB59D] hover:text-white group-hover:bg-[#7CB59D] group-hover:text-white group-hover:border-[#7CB59D]"
             >
               Подробнее
             </a>
