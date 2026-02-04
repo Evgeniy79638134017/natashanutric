@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2D6A4F;
+  --color-primary-light: #52B788;
+  --color-primary-dark: #1B4332;
+  --color-accent: #E9C46A;
+  --color-bg: #FDFAF6;
+  --color-bg-alt: #F0EBE3;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6B6B;
+}
+
+@layer base {
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
