@@ -11,10 +11,11 @@ Astro 5, Tailwind CSS 4, TypeScript, MDX (контент), React (формы/ф�
 - Альт-секции: gradient(180deg, #FFF8F2 → #FFF0F0)
 - Кнопки: gradient(135deg, #7CB59D → #5EA882), тень rgba(124,181,157,0.27)
 - Заголовки: #2E4A3A, текст: #555555, текст-light: #888888
-- Карточки: rgba(255,255,255,0.85)
+- Карточки: #FFFFFF, тень 0 4px 20px rgba(0,0,0,0.06), border-radius 16px
 - Акцент (бейджи): #F4A7B4, бейджи фон: #E8F5EE
 - Футер: #2E4A3A
-- Шрифты: Montserrat для заголовков, Source Sans 3 для текста
+- Шрифты: Playfair Display (заголовки, font-display), Raleway (текст, font-body)
+- Кнопки: PRIMARY (#7CB59D, white text), SECONDARY (border #7CB59D), GHOST (#E8F5EE)
 - Стиль: современный, нежный персиково-розовый, много воздуха, скруглённые углы
 - Mobile-first, адаптивный
 
@@ -27,6 +28,9 @@ Astro 5, Tailwind CSS 4, TypeScript, MDX (контент), React (формы/ф�
 /consultation — Запись на консультацию + тарифы
 /blog — Статьи
 /contacts — Контакты
+/privacy — Политика конфиденциальности
+/terms — Пользовательское соглашение
+/disclaimer — Отказ от ответственности
 
 ## Контент программ — в MDX файлах /src/content/programs/
 ## Статьи — в MDX файлах /src/content/blog/

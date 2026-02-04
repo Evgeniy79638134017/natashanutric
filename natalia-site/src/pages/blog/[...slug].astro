@@ -30,7 +30,7 @@ function formatDate(d: Date): string {
   <Header />
   <main>
     <!-- Breadcrumbs -->
-    <div style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);">
+    <div style="background: var(--gradient-alt);">
       <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-sm text-text-light" aria-label="Хлебные крошки">
           <a href="/" class="shrink-0 transition-colors hover:text-primary-dark">Главная</a>
@@ -47,7 +47,7 @@ function formatDate(d: Date): string {
         {formatDate(date)}
       </time>
 
-      <h1 class="mt-2 font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
+      <h1 class="mt-2 font-display text-3xl font-bold text-primary-dark md:text-5xl">
         {title}
       </h1>
 
@@ -59,7 +59,7 @@ function formatDate(d: Date): string {
         ))}
       </div>
 
-      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-[Montserrat] prose-headings:text-primary-dark prose-a:text-primary md:prose-lg">
+      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-display prose-headings:text-primary-dark prose-a:text-primary md:prose-lg">
         <Content />
       </div>
     </article>

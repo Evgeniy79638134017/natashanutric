@@ -66,9 +66,9 @@ const faq = [
 <PageLayout title="Записаться на консультацию — нутрициолог Наталья Ерёменко" description="Запишитесь на бесплатную консультацию нутрициолога Натальи Ерёменко. Тарифы, форма записи, ответы на вопросы.">
 
   <!-- Tariffs -->
-  <section class="bg-white/60 py-16 md:py-24">
+  <section class="bg-white py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h1 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
+      <h1 class="text-center font-display text-3xl font-bold text-primary-dark md:text-5xl">
         Запись на консультацию
       </h1>
       <p class="mt-3 text-center text-base text-text-light md:text-lg">
@@ -81,8 +81,8 @@ const faq = [
             class:list={[
               'relative flex flex-col rounded-2xl p-6 transition-shadow',
               highlighted
-                ? 'bg-card shadow-xl ring-2 ring-primary'
-                : 'bg-card shadow-md',
+                ? 'bg-white shadow-xl ring-2 ring-primary'
+                : 'bg-white shadow-md',
             ]}
           >
             {badge && (
@@ -94,11 +94,11 @@ const faq = [
               </span>
             )}
 
-            <h3 class="font-[Montserrat] text-lg font-semibold text-primary-dark md:text-xl">
+            <h3 class="font-display text-lg font-semibold text-primary-dark md:text-xl">
               {name}
             </h3>
 
-            <p class="mt-2 font-[Montserrat] text-2xl font-bold text-primary-dark md:text-3xl">
+            <p class="mt-2 font-display text-2xl font-bold text-primary-dark md:text-3xl">
               {price}
             </p>
 
@@ -125,25 +125,25 @@ const faq = [
   </section>
 
   <!-- Form -->
-  <section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+  <section style="background: var(--gradient-alt);" class="py-16 md:py-24">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
       <ConsultationForm client:load />
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="bg-white/60 py-16 md:py-24">
+  <section class="bg-white py-16 md:py-24">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
+      <h2 class="text-center font-display text-2xl font-bold text-primary-dark md:text-4xl">
         Частые вопросы
       </h2>
 
       <div class="mt-10 flex flex-col gap-4">
         {faq.map(({ question, answer }) => (
-          <details class="group rounded-2xl bg-card shadow-md">
+          <details class="group rounded-2xl bg-white shadow-md">
             <summary class="flex cursor-pointer items-center gap-4 px-6 py-5 [&::-webkit-details-marker]:hidden list-none">
               <span class="h-full w-1 shrink-0 self-stretch rounded-full bg-primary"></span>
-              <span class="flex-1 font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
+              <span class="flex-1 font-display text-base font-semibold text-primary-dark md:text-lg">
                 {question}
               </span>
               <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform group-open:rotate-45">
@@ -153,7 +153,7 @@ const faq = [
               </span>
             </summary>
             <div class="px-6 pb-5 pl-11">
-              <p class="text-sm leading-relaxed text-text-light md:text-base">{answer}</p>
+              <p class="text-base leading-relaxed text-text-light md:text-lg">{answer}</p>
             </div>
           </details>
         ))}

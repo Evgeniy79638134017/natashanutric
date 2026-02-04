@@ -19,7 +19,7 @@ const currentPath = Astro.url.pathname;
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
     <!-- Logo -->
     <a href="/" class="flex flex-col leading-tight">
-      <span class="font-[Montserrat] text-lg font-bold text-primary-dark">
+      <span class="font-display text-lg font-bold text-primary-dark">
         Наталья Ерёменко
       </span>
       <span class="text-xs text-text-light">нутрициолог-биохакер</span>
@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
         target="_blank"
         rel="noopener noreferrer"
         class="hidden rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-colors lg:inline-block"
-        style="background: linear-gradient(135deg, #7CB59D, #5EA882); box-shadow: 0 6px 20px rgba(124,181,157,0.27);"
+        style="background: #7CB59D; box-shadow: var(--shadow-button);"
       >
         Записаться
       </a>
@@ -88,7 +88,7 @@ const currentPath = Astro.url.pathname;
         <a
           href={href}
           class:list={[
-            'text-2xl font-[Montserrat] font-semibold transition-colors',
+            'text-2xl font-display font-semibold transition-colors',
             isActive ? 'text-primary-dark' : 'text-text hover:text-primary-dark',
           ]}
         >
@@ -101,7 +101,7 @@ const currentPath = Astro.url.pathname;
       target="_blank"
       rel="noopener noreferrer"
       class="mt-4 rounded-full px-8 py-3 text-lg font-semibold text-white transition-colors"
-      style="background: linear-gradient(135deg, #7CB59D, #5EA882);"
+      style="background: #7CB59D; box-shadow: var(--shadow-button);"
     >
       Записаться
     </a>

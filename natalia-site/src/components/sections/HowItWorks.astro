@@ -28,9 +28,9 @@ const steps = [
 ];
 ---
 
-<section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+<section style="background: var(--gradient-alt);" class="py-16 md:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
+    <h2 class="text-center font-display text-2xl font-bold text-primary-dark md:text-4xl">
       Как проходит работа
     </h2>
 
@@ -42,13 +42,13 @@ const steps = [
       <div class="grid grid-cols-5 gap-4">
         {steps.map(({ number, title, description }) => (
           <div class="relative flex flex-col items-center text-center">
-            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: linear-gradient(135deg, #7CB59D, #5EA882);">
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: #7CB59D;">
               {number}
             </div>
-            <h3 class="mt-4 font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
+            <h3 class="mt-4 font-display text-base font-semibold text-primary-dark md:text-lg">
               {title}
             </h3>
-            <p class="mt-1 text-sm leading-relaxed text-text-light md:text-base">
+            <p class="mt-1 text-base leading-relaxed text-text-light md:text-lg">
               {description}
             </p>
           </div>
@@ -63,14 +63,14 @@ const steps = [
       <div class="flex flex-col gap-8">
         {steps.map(({ number, title, description }) => (
           <div class="relative flex items-start gap-5">
-            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: linear-gradient(135deg, #7CB59D, #5EA882);">
+            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: #7CB59D;">
               {number}
             </div>
             <div>
-              <h3 class="font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
+              <h3 class="font-display text-base font-semibold text-primary-dark md:text-lg">
                 {title}
               </h3>
-              <p class="mt-1 text-sm leading-relaxed text-text-light md:text-base">
+              <p class="mt-1 text-base leading-relaxed text-text-light md:text-lg">
                 {description}
               </p>
             </div>

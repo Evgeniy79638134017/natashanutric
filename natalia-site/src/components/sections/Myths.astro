@@ -18,21 +18,21 @@ const myths = [
 ];
 ---
 
-<section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+<section style="background: var(--gradient-alt);" class="py-16 md:py-24">
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-    <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
+    <h2 class="text-center font-display text-2xl font-bold text-primary-dark md:text-4xl">
       Мифы о питании, в&nbsp;которые пора перестать верить
     </h2>
 
     <div class="mt-12 flex flex-col gap-4">
       {myths.map(({ question, answer }, i) => (
         <details
-          class="group rounded-2xl bg-card shadow-md"
+          class="group rounded-2xl bg-white shadow-md"
           data-myth
         >
           <summary class="flex cursor-pointer items-center gap-4 px-6 py-5 [&::-webkit-details-marker]:hidden list-none">
             <span class="h-full w-1 shrink-0 self-stretch rounded-full bg-primary"></span>
-            <span class="flex-1 font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
+            <span class="flex-1 font-display text-base font-semibold text-primary-dark md:text-lg">
               {question}
             </span>
             <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform group-open:rotate-45">
@@ -42,7 +42,7 @@ const myths = [
             </span>
           </summary>
           <div class="px-6 pb-5 pl-11">
-            <p class="text-sm leading-relaxed text-text-light md:text-base">
+            <p class="text-base leading-relaxed text-text-light md:text-lg">
               {answer}
             </p>
           </div>

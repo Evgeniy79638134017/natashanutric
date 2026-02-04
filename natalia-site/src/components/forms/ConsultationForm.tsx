@@ -47,7 +47,7 @@ export default function ConsultationForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="mt-4 font-[Montserrat] text-xl font-bold text-[#2E4A3A]">
+        <h3 className="mt-4 font-display text-xl font-bold text-[#2E4A3A]">
           Спасибо!
         </h3>
         <p className="mt-2 text-[#888888]">
@@ -69,7 +69,7 @@ export default function ConsultationForm() {
       onSubmit={handleSubmit}
       className="rounded-2xl bg-white p-6 shadow-lg md:p-8"
     >
-      <h3 className="font-[Montserrat] text-2xl font-bold text-[#2E4A3A]">
+      <h3 className="font-display text-2xl font-bold text-[#2E4A3A]">
         Записаться на консультацию
       </h3>
 

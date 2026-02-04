@@ -56,10 +56,10 @@ export default function ProgramFilter({ programs }: Props) {
             key={value}
             type="button"
             onClick={() => setActive(value)}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
               active === value
-                ? 'text-white' + ' ' + '[background:linear-gradient(135deg,#7CB59D,#5EA882)]'
-                : 'border border-[#2E4A3A]/20 text-[#555555] hover:border-[#2E4A3A] hover:text-[#2E4A3A]'
+                ? 'bg-[#7CB59D] text-white'
+                : 'bg-[#E8F5EE] text-[#2E4A3A] hover:bg-[#7CB59D] hover:text-white'
             }`}
           >
             {label}
@@ -72,10 +72,10 @@ export default function ProgramFilter({ programs }: Props) {
         {filtered.map((program) => (
           <div
             key={program.id}
-            className="flex flex-col rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+            className="flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg"
           >
             <div className="flex items-start justify-between gap-3">
-              <h3 className="font-[Montserrat] text-lg font-semibold text-[#2E4A3A]">
+              <h3 className="font-display text-lg font-semibold text-[#2E4A3A]">
                 {program.title}
               </h3>
               <span
@@ -101,7 +101,7 @@ export default function ProgramFilter({ programs }: Props) {
 
             <a
               href={`/programs/${program.id}`}
-              className="mt-5 block rounded-full border-2 border-[#2E4A3A]/20 py-2.5 text-center text-sm font-semibold text-[#2E4A3A] transition-colors hover:bg-[#2E4A3A] hover:text-white"
+              className="mt-5 block rounded-full border-2 border-[#7CB59D] py-2.5 text-center text-sm font-semibold text-[#7CB59D] transition-all duration-300 hover:bg-[#7CB59D] hover:text-white"
             >
               Подробнее
             </a>

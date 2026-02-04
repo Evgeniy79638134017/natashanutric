@@ -17,12 +17,12 @@ function formatDate(date: Date): string {
 ---
 
 <PageLayout title="Блог о здоровом питании — Наталья Ерёменко" description="Полезные статьи о питании, здоровье и биохакинге от нутрициолога Натальи Ерёменко.">
-  <section class="bg-white/60 py-16 md:py-24">
+  <section class="bg-white py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
+      <h1 class="font-display text-3xl font-bold text-primary-dark md:text-5xl">
         Блог о здоровом питании
       </h1>
-      <p class="mt-3 text-base text-text-light md:text-lg">
+      <p class="mt-3 text-lg text-text md:text-xl">
         Полезные статьи от нутрициолога
       </p>
 
@@ -33,15 +33,15 @@ function formatDate(date: Date): string {
           {sorted.map((post) => (
             <a
               href={`/blog/${post.id}`}
-              class="group flex flex-col rounded-2xl bg-card p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+              class="group flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg md:p-8"
             >
               <time class="text-xs text-text-light" datetime={post.data.date.toISOString()}>
                 {formatDate(post.data.date)}
               </time>
-              <h2 class="mt-2 font-[Montserrat] text-lg font-bold text-primary-dark transition-colors group-hover:text-primary md:text-xl">
+              <h2 class="mt-2 font-display text-lg font-bold text-primary-dark transition-colors group-hover:text-primary md:text-xl">
                 {post.data.title}
               </h2>
-              <p class="mt-3 text-sm leading-relaxed text-text-light md:text-base">
+              <p class="mt-3 text-base leading-relaxed text-text-light md:text-lg">
                 {post.data.description}
               </p>
               <div class="mt-4 flex flex-wrap gap-2">

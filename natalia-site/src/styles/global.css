@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Raleway', sans-serif;
+
   --color-primary: #7CB59D;
   --color-primary-light: #5EA882;
   --color-primary-dark: #2E4A3A;
@@ -9,9 +12,16 @@
   --color-bg-alt: #FFF0F0;
   --color-text: #555555;
   --color-text-light: #888888;
-  --color-card: rgba(255, 255, 255, 0.85);
+  --color-card: #FFFFFF;
   --color-badge-bg: #E8F5EE;
   --color-badge-text: #2E4A3A;
+}
+
+:root {
+  --gradient-hero: linear-gradient(135deg, #FDECD0 0%, #FBE4E0 50%, #FCE4EC 100%);
+  --gradient-alt: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-button: 0 6px 20px rgba(124,181,157,0.27);
 }
 
 @layer base {
@@ -20,9 +30,9 @@
   }
 
   body {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: var(--color-text);
-    background: linear-gradient(135deg, #FDECD0 0%, #FBE4E0 40%, #FCE4EC 100%);
+    background: var(--gradient-hero);
     background-attachment: fixed;
     overflow-x: hidden;
   }
@@ -33,7 +43,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #2E4A3A;
   }
 }
