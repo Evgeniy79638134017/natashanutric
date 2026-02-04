@@ -37,33 +37,33 @@ const lifestyle = [
 ];
 ---
 
-<PageLayout title="Об эксперте — Наталья Еременко, нутрициолог-биохакер" description="Нутрициолог-биохакер Наталья Еременко. Образование, опыт, принципы работы, личный пример здорового образа жизни.">
+<PageLayout title="Об эксперте — Наталья Ерёменко, нутрициолог-биохакер" description="Нутрициолог-биохакер Наталья Ерёменко. Образование, опыт, принципы работы, личный пример здорового образа жизни.">
 
   <!-- Секция 1: Заголовок -->
-  <section class="bg-gradient-to-b from-bg to-bg-alt py-16 md:py-24">
-    <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 lg:gap-16 lg:px-8">
+  <section style="background: linear-gradient(135deg, #FDECD0 0%, #FBE4E0 40%, #FCE4EC 100%);" class="py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 md:grid-cols-2 lg:gap-16 lg:px-8">
       <div class="flex justify-center md:justify-start">
-        <div class="flex h-[350px] w-full max-w-[350px] items-center justify-center rounded-3xl bg-bg-alt text-text-light shadow-lg md:h-[450px]" role="img" aria-label="Фото нутрициолога Натальи Еременко">
+        <div class="flex h-[350px] w-full max-w-[350px] items-center justify-center rounded-3xl bg-white/60 text-text-light shadow-lg md:h-[450px]" role="img" aria-label="Фото нутрициолога Натальи Ерёменко">
           <span class="text-lg">Фото Натальи</span>
         </div>
       </div>
       <div>
         <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
-          Наталья Еременко
+          Наталья Ерёменко
         </h1>
-        <p class="mt-3 text-xl text-primary">Нутрициолог-биохакер</p>
-        <p class="mt-4 text-text-light">Благовещенск · Онлайн по всей России</p>
+        <p class="mt-3 text-lg text-primary md:text-xl">Нутрициолог-биохакер</p>
+        <p class="mt-4 text-base text-text-light md:text-lg">Благовещенск · Онлайн по всей России</p>
       </div>
     </div>
   </section>
 
   <!-- Секция 2: Моя история -->
-  <section class="bg-bg py-16 md:py-24">
-    <div class="mx-auto max-w-3xl px-4 lg:px-8">
-      <h2 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+  <section class="bg-white/60 py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
         Мой путь в&nbsp;нутрициологию
       </h2>
-      <p class="mt-6 text-lg leading-relaxed text-text-light">
+      <p class="mt-6 text-base leading-relaxed text-text-light md:text-lg">
         Меня привело в&nbsp;нутрициологию здоровье моей семьи. Ребёнок долго болел,
         традиционные методы не&nbsp;помогали. Узнала о&nbsp;клеточном питании&nbsp;—
         результат появился через несколько дней. Начала делиться знаниями
@@ -74,18 +74,18 @@ const lifestyle = [
   </section>
 
   <!-- Секция 3: Принципы работы -->
-  <section class="bg-bg-alt py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 lg:px-8">
-      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+  <section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
         Принципы работы
       </h2>
       <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {principles.map(({ title, description }) => (
-          <div class="rounded-2xl bg-white p-6 shadow-md">
+          <div class="rounded-2xl bg-card p-6 shadow-md">
             <h3 class="font-[Montserrat] text-lg font-semibold text-primary-dark">
               {title}
             </h3>
-            <p class="mt-2 text-sm leading-relaxed text-text-light">
+            <p class="mt-2 text-sm leading-relaxed text-text-light md:text-base">
               {description}
             </p>
           </div>
@@ -95,13 +95,13 @@ const lifestyle = [
   </section>
 
   <!-- Секция 4: Образование -->
-  <section class="bg-bg py-16 md:py-24">
-    <div class="mx-auto max-w-3xl px-4 lg:px-8">
-      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+  <section class="bg-white/60 py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
         Образование и квалификация
       </h2>
       <div class="relative mt-12">
-        <div class="absolute bottom-0 left-4 top-0 w-0.5 bg-primary-light/40 md:left-1/2 md:-translate-x-px"></div>
+        <div class="absolute bottom-0 left-4 top-0 w-0.5 bg-primary/40 md:left-1/2 md:-translate-x-px"></div>
         <div class="flex flex-col gap-8">
           {education.map((item, i) => (
             <div class:list={[
@@ -110,16 +110,16 @@ const lifestyle = [
               i % 2 === 0 ? 'md:mr-auto md:pr-10' : 'md:ml-auto md:pl-10',
             ]}>
               <div class:list={[
-                'relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-md',
+                'relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white shadow-md',
                 i % 2 === 0 ? 'md:order-last md:absolute md:-right-[18px]' : 'md:absolute md:-left-[18px]',
-              ]}>
+              ]} style="background: linear-gradient(135deg, #7CB59D, #5EA882);">
                 {i + 1}
               </div>
               <div class:list={[
-                'rounded-xl bg-white px-5 py-4 shadow-md',
+                'rounded-xl bg-card px-5 py-4 shadow-md',
                 i % 2 === 0 ? 'md:text-right' : '',
               ]}>
-                <p class="text-sm font-medium text-text">{item}</p>
+                <p class="text-sm font-medium text-text md:text-base">{item}</p>
               </div>
             </div>
           ))}
@@ -129,16 +129,16 @@ const lifestyle = [
   </section>
 
   <!-- Секция 5: Образ жизни -->
-  <section class="bg-bg-alt py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 lg:px-8">
-      <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+  <section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
         Образ жизни
       </h2>
       <div class="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
         {lifestyle.map(({ emoji, text }) => (
           <div class="flex flex-col items-center gap-2 text-center">
             <span class="text-4xl">{emoji}</span>
-            <span class="text-sm font-medium text-text">{text}</span>
+            <span class="text-sm font-medium text-text md:text-base">{text}</span>
           </div>
         ))}
       </div>

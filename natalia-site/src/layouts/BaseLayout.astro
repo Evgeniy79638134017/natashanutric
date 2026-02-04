@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Нутрициолог Наталья Еременко — консультации по питанию, программы здоровья, биохакинг в Благовещенске' } = Astro.props;
+const { title, description = 'Нутрициолог Наталья Ерёменко — консультации по питанию, программы здоровья, биохакинг в Благовещенске' } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.com');
 ---
 
@@ -22,7 +22,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="Наталья Еременко — нутрициолог" />
+    <meta property="og:site_name" content="Наталья Ерёменко — нутрициолог" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +32,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body class="bg-bg text-text min-h-screen overflow-x-hidden">
+  <body class="text-text min-h-screen overflow-x-hidden">
     <slot />
   </body>
 </html>

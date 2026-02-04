@@ -28,27 +28,27 @@ const steps = [
 ];
 ---
 
-<section class="bg-bg-alt py-16 md:py-24">
-  <div class="mx-auto max-w-7xl px-4 lg:px-8">
-    <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+<section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
       Как проходит работа
     </h2>
 
     <!-- Desktop: horizontal -->
     <div class="relative mt-14 hidden lg:block">
       <!-- Connecting line -->
-      <div class="absolute left-0 right-0 top-6 h-0.5 bg-primary-light/40"></div>
+      <div class="absolute left-0 right-0 top-6 h-0.5 bg-primary/40"></div>
 
       <div class="grid grid-cols-5 gap-4">
         {steps.map(({ number, title, description }) => (
           <div class="relative flex flex-col items-center text-center">
-            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white shadow-md">
+            <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: linear-gradient(135deg, #7CB59D, #5EA882);">
               {number}
             </div>
-            <h3 class="mt-4 font-[Montserrat] text-base font-semibold text-primary-dark">
+            <h3 class="mt-4 font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
               {title}
             </h3>
-            <p class="mt-1 text-sm leading-relaxed text-text-light">
+            <p class="mt-1 text-sm leading-relaxed text-text-light md:text-base">
               {description}
             </p>
           </div>
@@ -58,19 +58,19 @@ const steps = [
 
     <!-- Mobile: vertical -->
     <div class="relative mt-10 lg:hidden">
-      <div class="absolute bottom-0 left-6 top-0 w-0.5 bg-primary-light/40"></div>
+      <div class="absolute bottom-0 left-6 top-0 w-0.5 bg-primary/40"></div>
 
       <div class="flex flex-col gap-8">
         {steps.map(({ number, title, description }) => (
           <div class="relative flex items-start gap-5">
-            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-white shadow-md">
+            <div class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white shadow-md" style="background: linear-gradient(135deg, #7CB59D, #5EA882);">
               {number}
             </div>
             <div>
-              <h3 class="font-[Montserrat] text-base font-semibold text-primary-dark">
+              <h3 class="font-[Montserrat] text-base font-semibold text-primary-dark md:text-lg">
                 {title}
               </h3>
-              <p class="mt-1 text-sm leading-relaxed text-text-light">
+              <p class="mt-1 text-sm leading-relaxed text-text-light md:text-base">
                 {description}
               </p>
             </div>

@@ -33,15 +33,15 @@ const info = [
 ];
 ---
 
-<PageLayout title="Контакты — нутрициолог Наталья Еременко" description="Свяжитесь с нутрициологом Натальей Еременко. WhatsApp, Telegram, Instagram. Благовещенск, онлайн по всей России.">
+<PageLayout title="Контакты — нутрициолог Наталья Ерёменко" description="Свяжитесь с нутрициологом Натальей Ерёменко. WhatsApp, Telegram, Instagram. Благовещенск, онлайн по всей России.">
 
   <!-- Social cards -->
-  <section class="bg-bg py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 lg:px-8">
-      <h1 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+  <section class="bg-white/60 py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
         Свяжитесь со мной
       </h1>
-      <p class="mt-3 text-center text-lg text-text-light">
+      <p class="mt-3 text-center text-base text-text-light md:text-lg">
         Выберите удобный способ связи
       </p>
 
@@ -51,7 +51,7 @@ const info = [
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-md transition-shadow hover:shadow-lg"
+            class="group flex flex-col items-center rounded-2xl bg-card p-8 text-center shadow-md transition-shadow hover:shadow-lg"
           >
             <div class:list={['flex h-16 w-16 items-center justify-center rounded-2xl transition-colors', color]}>
               <svg
@@ -61,10 +61,10 @@ const info = [
                 set:html={icon}
               />
             </div>
-            <h3 class="mt-4 font-[Montserrat] text-lg font-semibold text-primary-dark">
+            <h3 class="mt-4 font-[Montserrat] text-lg font-semibold text-primary-dark md:text-xl">
               {name}
             </h3>
-            <p class="mt-2 text-sm text-text-light">
+            <p class="mt-2 text-sm text-text-light md:text-base">
               {description}
             </p>
           </a>
@@ -74,13 +74,13 @@ const info = [
   </section>
 
   <!-- Info -->
-  <section class="bg-bg-alt py-16 md:py-20">
-    <div class="mx-auto max-w-3xl px-4 lg:px-8">
+  <section style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);" class="py-16 md:py-20">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center gap-6 md:flex-row md:justify-center md:gap-12">
         {info.map(({ emoji, text }) => (
           <div class="flex items-center gap-3">
             <span class="text-2xl">{emoji}</span>
-            <span class="text-sm font-medium text-text">{text}</span>
+            <span class="text-sm font-medium text-text md:text-base">{text}</span>
           </div>
         ))}
       </div>

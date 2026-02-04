@@ -26,40 +26,40 @@ function formatDate(d: Date): string {
 }
 ---
 
-<BaseLayout title={`${title} — Блог Натальи Еременко`} description={description}>
+<BaseLayout title={`${title} — Блог Натальи Ерёменко`} description={description}>
   <Header />
   <main>
     <!-- Breadcrumbs -->
-    <div class="bg-bg-alt">
-      <div class="mx-auto max-w-7xl px-4 py-3 lg:px-8">
+    <div style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);">
+      <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-sm text-text-light" aria-label="Хлебные крошки">
-          <a href="/" class="shrink-0 transition-colors hover:text-primary">Главная</a>
+          <a href="/" class="shrink-0 transition-colors hover:text-primary-dark">Главная</a>
           <span class="shrink-0">/</span>
-          <a href="/blog" class="shrink-0 transition-colors hover:text-primary">Блог</a>
+          <a href="/blog" class="shrink-0 transition-colors hover:text-primary-dark">Блог</a>
           <span class="shrink-0">/</span>
           <span class="truncate text-text">{title}</span>
         </nav>
       </div>
     </div>
 
-    <article class="mx-auto max-w-3xl px-4 py-10 md:py-16 lg:px-8">
+    <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 md:py-16 lg:px-8">
       <time class="text-sm text-text-light" datetime={date.toISOString()}>
         {formatDate(date)}
       </time>
 
-      <h1 class="mt-2 font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+      <h1 class="mt-2 font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
         {title}
       </h1>
 
       <div class="mt-4 flex flex-wrap gap-2">
         {tags.map((tag: string) => (
-          <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+          <span class="rounded-full bg-badge-bg px-3 py-1 text-xs font-medium text-badge-text">
             {tag}
           </span>
         ))}
       </div>
 
-      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-[Montserrat] prose-headings:text-primary-dark prose-a:text-primary">
+      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-[Montserrat] prose-headings:text-primary-dark prose-a:text-primary md:prose-lg">
         <Content />
       </div>
     </article>

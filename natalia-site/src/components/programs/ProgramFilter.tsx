@@ -58,8 +58,8 @@ export default function ProgramFilter({ programs }: Props) {
             onClick={() => setActive(value)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
               active === value
-                ? 'bg-[#2D6A4F] text-white'
-                : 'border border-[#2D6A4F]/30 text-[#2C2C2C] hover:border-[#2D6A4F] hover:text-[#2D6A4F]'
+                ? 'text-white' + ' ' + '[background:linear-gradient(135deg,#7CB59D,#5EA882)]'
+                : 'border border-[#2E4A3A]/20 text-[#555555] hover:border-[#2E4A3A] hover:text-[#2E4A3A]'
             }`}
           >
             {label}
@@ -75,7 +75,7 @@ export default function ProgramFilter({ programs }: Props) {
             className="flex flex-col rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
           >
             <div className="flex items-start justify-between gap-3">
-              <h3 className="font-[Montserrat] text-lg font-semibold text-[#1B4332]">
+              <h3 className="font-[Montserrat] text-lg font-semibold text-[#2E4A3A]">
                 {program.title}
               </h3>
               <span
@@ -85,23 +85,23 @@ export default function ProgramFilter({ programs }: Props) {
               </span>
             </div>
 
-            <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-[#6B6B6B]">
+            <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-[#888888]">
               {program.description}
             </p>
 
-            <div className="mt-4 flex items-center gap-4 text-sm text-[#6B6B6B]">
+            <div className="mt-4 flex items-center gap-4 text-sm text-[#888888]">
               <span className="flex items-center gap-1">
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {program.duration}
               </span>
-              <span className="font-semibold text-[#2D6A4F]">{program.price}</span>
+              <span className="font-semibold text-[#2E4A3A]">{program.price}</span>
             </div>
 
             <a
               href={`/programs/${program.id}`}
-              className="mt-5 block rounded-full border-2 border-[#2D6A4F] py-2.5 text-center text-sm font-semibold text-[#2D6A4F] transition-colors hover:bg-[#2D6A4F] hover:text-white"
+              className="mt-5 block rounded-full border-2 border-[#2E4A3A]/20 py-2.5 text-center text-sm font-semibold text-[#2E4A3A] transition-colors hover:bg-[#2E4A3A] hover:text-white"
             >
               Подробнее
             </a>
@@ -110,7 +110,7 @@ export default function ProgramFilter({ programs }: Props) {
       </div>
 
       {filtered.length === 0 && (
-        <p className="mt-10 text-center text-[#6B6B6B]">
+        <p className="mt-10 text-center text-[#888888]">
           В этой категории пока нет программ
         </p>
       )}

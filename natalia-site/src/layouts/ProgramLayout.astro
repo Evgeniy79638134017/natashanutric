@@ -28,47 +28,47 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={`${title} — Наталья Еременко`} description={description}>
+<BaseLayout title={`${title} — Наталья Ерёменко`} description={description}>
   <Header />
   <main>
     <!-- Breadcrumbs -->
-    <div class="bg-bg-alt">
-      <div class="mx-auto max-w-7xl px-4 py-3 lg:px-8">
+    <div style="background: linear-gradient(180deg, #FFF8F2 0%, #FFF0F0 100%);">
+      <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-sm text-text-light" aria-label="Хлебные крошки">
-          <a href="/" class="shrink-0 transition-colors hover:text-primary">Главная</a>
+          <a href="/" class="shrink-0 transition-colors hover:text-primary-dark">Главная</a>
           <span class="shrink-0">/</span>
-          <a href="/programs" class="shrink-0 transition-colors hover:text-primary">Программы</a>
+          <a href="/programs" class="shrink-0 transition-colors hover:text-primary-dark">Программы</a>
           <span class="shrink-0">/</span>
           <span class="truncate text-text">{title}</span>
         </nav>
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-4 py-10 md:py-16 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:py-16 lg:px-8">
       <div class="lg:grid lg:grid-cols-3 lg:gap-12">
         <!-- Main content -->
         <div class="lg:col-span-2">
-          <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+          <h1 class="font-[Montserrat] text-3xl font-bold text-primary-dark md:text-5xl">
             {title}
           </h1>
-          <p class="mt-4 text-lg leading-relaxed text-text-light">
+          <p class="mt-4 text-base leading-relaxed text-text-light md:text-lg">
             {description}
           </p>
 
           <!-- MDX content -->
-          <div class="prose mt-8 max-w-none text-text-light">
+          <div class="prose mt-8 max-w-none text-text-light md:prose-lg">
             <slot />
           </div>
 
           <!-- For whom -->
           <section class="mt-10">
-            <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark">
+            <h2 class="font-[Montserrat] text-xl font-bold text-primary-dark md:text-2xl">
               Для кого подходит
             </h2>
             <ul class="mt-4 flex flex-col gap-3">
               {forWhom.map((item) => (
-                <li class="flex items-start gap-3 text-text-light">
-                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-light/20 text-xs text-primary">✓</span>
+                <li class="flex items-start gap-3 text-base text-text-light md:text-lg">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-badge-bg text-xs text-primary-dark">✓</span>
                   {item}
                 </li>
               ))}
@@ -77,13 +77,13 @@ const {
 
           <!-- Includes -->
           <section class="mt-10">
-            <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark">
+            <h2 class="font-[Montserrat] text-xl font-bold text-primary-dark md:text-2xl">
               Что включает
             </h2>
             <ul class="mt-4 flex flex-col gap-3">
               {programIncludes.map((item) => (
-                <li class="flex items-start gap-3 text-text-light">
-                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-light/20 text-xs text-primary">✓</span>
+                <li class="flex items-start gap-3 text-base text-text-light md:text-lg">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-badge-bg text-xs text-primary-dark">✓</span>
                   {item}
                 </li>
               ))}
@@ -92,7 +92,7 @@ const {
 
           <!-- Products -->
           <section class="mt-10">
-            <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark">
+            <h2 class="font-[Montserrat] text-xl font-bold text-primary-dark md:text-2xl">
               Продукты Genes
             </h2>
             <div class="mt-4 flex flex-wrap gap-2">
@@ -106,12 +106,12 @@ const {
 
           <!-- Results -->
           <section class="mt-10">
-            <h2 class="font-[Montserrat] text-2xl font-bold text-primary-dark">
+            <h2 class="font-[Montserrat] text-xl font-bold text-primary-dark md:text-2xl">
               Ожидаемые результаты
             </h2>
             <ul class="mt-4 flex flex-col gap-3">
               {results.map((item) => (
-                <li class="flex items-start gap-3 text-text-light">
+                <li class="flex items-start gap-3 text-base text-text-light md:text-lg">
                   <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/30 text-xs text-primary-dark">★</span>
                   {item}
                 </li>
@@ -122,15 +122,15 @@ const {
 
         <!-- Sidebar -->
         <aside class="mt-10 lg:mt-0">
-          <div class="sticky top-20 rounded-2xl bg-white p-6 shadow-lg">
-            <p class="text-sm font-medium text-text-light">Длительность</p>
+          <div class="sticky top-20 rounded-2xl bg-card p-6 shadow-lg">
+            <p class="text-sm font-medium text-text-light md:text-base">Длительность</p>
             <p class="mt-1 font-[Montserrat] text-lg font-semibold text-primary-dark">
               {duration}
             </p>
 
             <div class="mt-5 border-t border-bg-alt pt-5">
-              <p class="text-sm font-medium text-text-light">Стоимость</p>
-              <p class="mt-1 font-[Montserrat] text-3xl font-bold text-primary">
+              <p class="text-sm font-medium text-text-light md:text-base">Стоимость</p>
+              <p class="mt-1 font-[Montserrat] text-3xl font-bold text-primary-dark">
                 {price}
               </p>
               {priceNote && (
@@ -140,7 +140,8 @@ const {
 
             <a
               href="/consultation"
-              class="mt-6 block w-full rounded-full bg-primary py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-primary-dark"
+              class="mt-6 block w-full rounded-full py-3.5 text-center text-base font-semibold text-white transition-colors md:text-lg"
+              style="background: linear-gradient(135deg, #7CB59D, #5EA882); box-shadow: 0 6px 20px rgba(124,181,157,0.27);"
             >
               Записаться на консультацию
             </a>

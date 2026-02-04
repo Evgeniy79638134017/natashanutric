@@ -13,13 +13,14 @@ const currentPath = Astro.url.pathname;
 
 <header
   id="site-header"
-  class="fixed top-0 left-0 right-0 z-[110] bg-white/80 backdrop-blur-md transition-shadow duration-300"
+  class="fixed top-0 left-0 right-0 z-[110] transition-shadow duration-300"
+  style="background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"
 >
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
     <!-- Logo -->
     <a href="/" class="flex flex-col leading-tight">
       <span class="font-[Montserrat] text-lg font-bold text-primary-dark">
-        Наталья Еременко
+        Наталья Ерёменко
       </span>
       <span class="text-xs text-text-light">нутрициолог-биохакер</span>
     </a>
@@ -32,10 +33,10 @@ const currentPath = Astro.url.pathname;
           <a
             href={href}
             class:list={[
-              'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+              'rounded-lg px-3 py-2 text-sm font-medium transition-colors md:text-base',
               isActive
-                ? 'bg-primary/10 text-primary'
-                : 'text-text hover:bg-primary/5 hover:text-primary',
+                ? 'bg-primary/10 text-primary-dark'
+                : 'text-text hover:bg-primary/5 hover:text-primary-dark',
             ]}
           >
             {label}
@@ -48,7 +49,8 @@ const currentPath = Astro.url.pathname;
     <div class="flex items-center gap-3">
       <a
         href="/consultation"
-        class="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark lg:inline-block"
+        class="hidden rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-colors lg:inline-block"
+        style="background: linear-gradient(135deg, #7CB59D, #5EA882); box-shadow: 0 6px 20px rgba(124,181,157,0.27);"
       >
         Записаться
       </a>
@@ -57,7 +59,7 @@ const currentPath = Astro.url.pathname;
       <button
         id="burger-btn"
         type="button"
-        class="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg lg:hidden"
+        class="relative z-[120] flex h-10 w-10 items-center justify-center rounded-lg lg:hidden"
         aria-label="Открыть меню"
         aria-expanded="false"
       >
@@ -85,7 +87,7 @@ const currentPath = Astro.url.pathname;
           href={href}
           class:list={[
             'text-2xl font-[Montserrat] font-semibold transition-colors',
-            isActive ? 'text-primary' : 'text-text hover:text-primary',
+            isActive ? 'text-primary-dark' : 'text-text hover:text-primary-dark',
           ]}
         >
           {label}
@@ -94,7 +96,8 @@ const currentPath = Astro.url.pathname;
     })}
     <a
       href="/consultation"
-      class="mt-4 rounded-full bg-primary px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-primary-dark"
+      class="mt-4 rounded-full px-8 py-3 text-lg font-semibold text-white transition-colors"
+      style="background: linear-gradient(135deg, #7CB59D, #5EA882);"
     >
       Записаться
     </a>

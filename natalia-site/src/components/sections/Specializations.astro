@@ -23,20 +23,20 @@ const cards = [
 ];
 ---
 
-<section id="specializations" class="bg-bg py-16 md:py-24">
-  <div class="mx-auto max-w-7xl px-4 lg:px-8">
-    <h2 class="text-center font-[Montserrat] text-3xl font-bold text-primary-dark md:text-4xl">
+<section id="specializations" class="bg-white/60 py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="text-center font-[Montserrat] text-2xl font-bold text-primary-dark md:text-4xl">
       Чем я могу помочь
     </h2>
 
     <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {cards.map(({ emoji, title, description }) => (
-        <div class="rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+        <div class="rounded-2xl bg-card p-6 shadow-md transition-shadow hover:shadow-lg">
           <span class="text-4xl">{emoji}</span>
-          <h3 class="mt-4 font-[Montserrat] text-xl font-semibold text-primary-dark">
+          <h3 class="mt-4 font-[Montserrat] text-lg font-semibold text-primary-dark md:text-xl">
             {title}
           </h3>
-          <p class="mt-2 text-sm leading-relaxed text-text-light">
+          <p class="mt-2 text-sm leading-relaxed text-text-light md:text-base">
             {description}
           </p>
         </div>
