@@ -9,6 +9,35 @@ import CTA from '../components/sections/CTA.astro';
 ---
 
 <PageLayout title="Наталья Еременко — нутрициолог в Благовещенске" description="Комплексные программы восстановления здоровья на основе клеточного питания. Нутрициолог-биохакер Наталья Еременко, Благовещенск.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Наталья Еременко — нутрициолог",
+          "url": "https://example.com",
+          "description": "Комплексные программы восстановления здоровья на основе клеточного питания",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Благовещенск",
+            "addressRegion": "Амурская область",
+            "addressCountry": "RU"
+          },
+          "sameAs": [
+            "https://wa.me/79638134017",
+            "https://t.me/natashanutric",
+            "https://instagram.com/natashanutric"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Наталья Еременко — нутрициолог",
+          "url": "https://example.com"
+        }
+      ]
+    })} />
+  </Fragment>
   <Hero />
   <Specializations />
   <HowItWorks />

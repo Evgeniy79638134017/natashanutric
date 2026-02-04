@@ -12,6 +12,7 @@ const { title, description } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
+  <Fragment slot="head"><slot name="head" /></Fragment>
   <Header />
   <main>
     <slot />
