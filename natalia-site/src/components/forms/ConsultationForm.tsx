@@ -13,6 +13,7 @@ export default function ConsultationForm() {
   const [tariff, setTariff] = useState('intro');
   const [concern, setConcern] = useState('');
   const [preferredTime, setPreferredTime] = useState('');
+  const [consent, setConsent] = useState(false);
   const [sent, setSent] = useState(false);
 
   function handleSubmit(e: FormEvent) {
@@ -161,11 +162,30 @@ export default function ConsultationForm() {
         />
       </div>
 
+      {/* Consent */}
+      <label className="mt-6 flex cursor-pointer items-start gap-3">
+        <input
+          type="checkbox"
+          required
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[#7CB59D]"
+        />
+        <span className="text-xs leading-relaxed text-[#888888]">
+          Нажимая кнопку «Записаться», я даю согласие на обработку персональных данных
+          в соответствии с{' '}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-[#7CB59D] underline hover:text-[#5EA882]">
+            Политикой конфиденциальности
+          </a>
+        </span>
+      </label>
+
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-[#2E4A3A] py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#5EA882]"
+        disabled={!consent}
+        className="mt-4 w-full rounded-full bg-[#2E4A3A] py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#5EA882] disabled:cursor-not-allowed disabled:opacity-50"
       >
-        Отправить в Telegram
+        Записаться
       </button>
     </form>
   );
