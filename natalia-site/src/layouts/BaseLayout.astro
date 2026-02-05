@@ -40,7 +40,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <div style="position:fixed; top:0; left:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to right, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-left"></div>
     <div style="position:fixed; top:0; right:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to left, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-right"></div>
     <style>
-      @media (min-width: 1280px) {
+      @media (min-width: 1024px) {
         .side-wave-left, .side-wave-right {
           display: block !important;
         }
