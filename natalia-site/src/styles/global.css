@@ -30,25 +30,47 @@
   }
 
   body {
-    position: relative;
     font-family: 'Raleway', sans-serif;
     color: var(--color-text);
     background: var(--gradient-hero);
     background-attachment: fixed;
-    overflow-x: hidden;
   }
 
-  body::after {
+  /* Вертикальная волна — левая */
+  body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.04;
+    bottom: 0;
+    width: 120px;
     pointer-events: none;
-    z-index: 2;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: 30;
+    background-repeat: repeat-y;
+    background-size: 100% 400px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100,0 Q60,50 100,100 Q40,150 100,200 Q60,250 100,300 Q40,350 100,400 L0,400 L0,0 Z' fill='rgba(251,228,224,0.45)'/%3E%3Cpath d='M80,0 Q40,50 80,100 Q20,150 80,200 Q40,250 80,300 Q20,350 80,400 L0,400 L0,0 Z' fill='rgba(253,236,208,0.35)'/%3E%3C/svg%3E");
+  }
+
+  /* Вертикальная волна — правая */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    pointer-events: none;
+    z-index: 30;
+    background-repeat: repeat-y;
+    background-size: 100% 400px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 Q40,50 0,100 Q60,150 0,200 Q40,250 0,300 Q60,350 0,400 L100,400 L100,0 Z' fill='rgba(251,228,224,0.45)'/%3E%3Cpath d='M20,0 Q60,50 20,100 Q80,150 20,200 Q60,250 20,300 Q80,350 20,400 L100,400 L100,0 Z' fill='rgba(253,236,208,0.35)'/%3E%3C/svg%3E");
+  }
+
+  @media (max-width: 1024px) {
+    body::before,
+    body::after {
+      display: none;
+    }
   }
 
   h1,
