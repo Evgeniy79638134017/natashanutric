@@ -36,24 +36,14 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <slot name="head" />
   </head>
   <body class="font-body text-text min-h-screen pb-20 md:pb-0">
-    <!-- Левая вертикальная волна -->
-    <div id="vwave-left" aria-hidden="true" style="position:fixed; top:0; left:0; width:120px; height:100vh; height:100dvh; pointer-events:none; z-index:30; overflow:visible;">
-      <svg width="120" height="100%" viewBox="0 0 120 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:100%;">
-        <path d="M120,0 C80,100 120,200 80,300 C40,400 120,500 80,600 C40,700 120,800 80,800 L0,800 L0,0 Z" fill="#FBE4E0" fill-opacity="0.6" />
-        <path d="M100,0 C60,100 100,200 60,300 C20,400 100,500 60,600 C20,700 100,800 60,800 L0,800 L0,0 Z" fill="#FDECD0" fill-opacity="0.5" />
-      </svg>
-    </div>
-    <!-- Правая вертикальная волна -->
-    <div id="vwave-right" aria-hidden="true" style="position:fixed; top:0; right:0; width:120px; height:100vh; height:100dvh; pointer-events:none; z-index:30; overflow:visible;">
-      <svg width="120" height="100%" viewBox="0 0 120 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:100%;">
-        <path d="M0,0 C40,100 0,200 40,300 C80,400 0,500 40,600 C80,700 0,800 40,800 L120,800 L120,0 Z" fill="#FBE4E0" fill-opacity="0.6" />
-        <path d="M20,0 C60,100 20,200 60,300 C100,400 20,500 60,600 C100,700 20,800 60,800 L120,800 L120,0 Z" fill="#FDECD0" fill-opacity="0.5" />
-      </svg>
-    </div>
-    <!-- Hide waves on screens < 1024px -->
+    <!-- Декоративные боковые полосы -->
+    <div style="position:fixed; top:0; left:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to right, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-left"></div>
+    <div style="position:fixed; top:0; right:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to left, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-right"></div>
     <style>
-      @media (max-width: 1024px) {
-        #vwave-left, #vwave-right { display: none !important; }
+      @media (min-width: 1280px) {
+        .side-wave-left, .side-wave-right {
+          display: block !important;
+        }
       }
     </style>
     <!-- Grain texture overlay -->
