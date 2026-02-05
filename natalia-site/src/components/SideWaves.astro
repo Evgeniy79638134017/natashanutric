@@ -1,0 +1,45 @@
+---
+---
+<!-- Левая волна -->
+<div class="side-wave side-wave-left" aria-hidden="true">
+  <svg viewBox="0 0 150 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M150,0 Q100,50 130,100 Q80,150 120,200 Q70,250 110,300 Q60,350 100,400 Q50,450 90,500 Q40,550 80,600 Q30,650 70,700 Q20,750 60,800 L0,800 L0,0 Z" fill="#F8C8C0"/>
+    <path d="M120,0 Q70,60 100,120 Q50,180 90,240 Q40,300 80,360 Q30,420 70,480 Q20,540 60,600 Q10,660 50,720 Q0,780 40,800 L0,800 L0,0 Z" fill="#FDDCC0" fill-opacity="0.7"/>
+  </svg>
+</div>
+
+<!-- Правая волна -->
+<div class="side-wave side-wave-right" aria-hidden="true">
+  <svg viewBox="0 0 150 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M0,0 Q50,50 20,100 Q70,150 30,200 Q80,250 40,300 Q90,350 50,400 Q100,450 60,500 Q110,550 70,600 Q120,650 80,700 Q130,750 90,800 L150,800 L150,0 Z" fill="#F8C8C0"/>
+    <path d="M30,0 Q80,60 50,120 Q100,180 60,240 Q110,300 70,360 Q120,420 80,480 Q130,540 90,600 Q140,660 100,720 Q150,780 110,800 L150,800 L150,0 Z" fill="#FDDCC0" fill-opacity="0.7"/>
+  </svg>
+</div>
+
+<style>
+  .side-wave {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    pointer-events: none;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .side-wave-left {
+    left: 0;
+  }
+
+  .side-wave-right {
+    right: 0;
+  }
+
+  /* Показывать только на широких экранах */
+  @media (min-width: 1280px) {
+    .side-wave {
+      display: block;
+    }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+import SideWaves from '../components/SideWaves.astro';
 
 const socials = [
   {
@@ -36,8 +37,9 @@ const info = [
 <PageLayout title="Контакты — нутрициолог Наталья Ерёменко" description="Свяжитесь с нутрициологом Натальей Ерёменко. WhatsApp, Telegram, Instagram. Благовещенск, онлайн по всей России.">
 
   <!-- Social cards -->
-  <section class="bg-white py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="bg-white py-16 md:py-24 relative overflow-hidden">
+    <SideWaves />
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <h1 class="text-center font-display text-3xl font-bold text-primary-dark md:text-5xl">
         Свяжитесь со мной
       </h1>

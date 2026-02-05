@@ -2,11 +2,13 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
 import { cases } from '../data/cases';
+import SideWaves from '../components/SideWaves.astro';
 ---
 
 <PageLayout title="Результаты клиентов — нутрициолог Наталья Ерёменко" description="Реальные истории людей, которые изменили своё здоровье с помощью нутрициолога Натальи Ерёменко.">
-  <section class="bg-white py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="bg-white py-16 md:py-24 relative overflow-hidden">
+    <SideWaves />
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <h1 class="font-display text-3xl font-bold text-primary-dark md:text-5xl">
         Результаты клиентов
       </h1>

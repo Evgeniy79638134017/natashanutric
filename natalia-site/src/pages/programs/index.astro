@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
 import ProgramFilter from '../../components/programs/ProgramFilter';
+import SideWaves from '../../components/SideWaves.astro';
 
 const allPrograms = await getCollection('programs');
 const sorted = allPrograms.sort((a, b) => a.data.order - b.data.order);
@@ -17,8 +18,9 @@ const programsData = sorted.map((p) => ({
 ---
 
 <PageLayout title="Программы здоровья — Наталья Ерёменко" description="Индивидуальные программы питания и здоровья от 30 до 180 дней с полным сопровождением.">
-  <section class="relative z-10 bg-white py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="relative bg-white py-16 md:py-24 overflow-hidden">
+    <SideWaves />
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <h1 class="font-display text-3xl font-bold text-primary-dark md:text-5xl">
         Программы здоровья
       </h1>

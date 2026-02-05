@@ -21,10 +21,12 @@ const cards = [
     description: 'Укрепление иммунной системы',
   },
 ];
+import SideWaves from '../SideWaves.astro';
 ---
 
-<section id="specializations" class="bg-white py-16 md:py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<section id="specializations" class="bg-white py-16 md:py-24 relative overflow-hidden">
+  <SideWaves />
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
     <h2 class="text-center font-display text-2xl font-bold text-primary-dark md:text-4xl">
       Чем я могу помочь
     </h2>

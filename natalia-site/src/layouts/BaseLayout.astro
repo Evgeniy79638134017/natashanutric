@@ -36,16 +36,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <slot name="head" />
   </head>
   <body class="font-body text-text min-h-screen pb-20 md:pb-0">
-    <!-- Декоративные боковые полосы -->
-    <div style="position:fixed; top:0; left:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to right, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-left"></div>
-    <div style="position:fixed; top:0; right:0; width:100px; height:100vh; pointer-events:none; z-index:30; background:linear-gradient(to left, rgba(251,228,224,0.5), rgba(253,236,208,0.3), transparent); display:none;" class="side-wave-right"></div>
-    <style>
-      @media (min-width: 1024px) {
-        .side-wave-left, .side-wave-right {
-          display: block !important;
-        }
-      }
-    </style>
     <!-- Grain texture overlay -->
     <div style="position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:2;opacity:0.04;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
     <div class="relative z-[3]">
