@@ -1,18 +1,18 @@
 ---
 ---
-<!-- Левая волна — плавные кубические кривые Безье -->
+<!-- Левая волна — равномерная амплитуда ~30px по всей высоте -->
 <div class="side-wave side-wave-left" aria-hidden="true">
-  <svg viewBox="0 0 60 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
-    <path d="M0,0 C25,100 5,200 30,300 C55,400 10,500 35,600 C60,700 20,750 0,800 L0,0 Z" fill="#F8C8C0"/>
-    <path d="M0,0 C15,150 -5,300 20,450 C45,600 5,700 0,800 L0,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
+  <svg viewBox="0 0 50 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M35,0 C10,80 40,160 15,240 C-10,320 40,400 15,480 C-10,560 40,640 15,720 C-10,800 35,800 35,800 L0,800 L0,0 Z" fill="#F8C8C0"/>
+    <path d="M30,0 C5,100 35,200 10,300 C-15,400 35,500 10,600 C-15,700 30,800 30,800 L0,800 L0,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
   </svg>
 </div>
 
-<!-- Правая волна — зеркальная -->
+<!-- Правая волна — зеркальная, равномерная амплитуда -->
 <div class="side-wave side-wave-right" aria-hidden="true">
-  <svg viewBox="0 0 60 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
-    <path d="M60,0 C35,100 55,200 30,300 C5,400 50,500 25,600 C0,700 40,750 60,800 L60,0 Z" fill="#F8C8C0"/>
-    <path d="M60,0 C45,150 65,300 40,450 C15,600 55,700 60,800 L60,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
+  <svg viewBox="0 0 50 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M15,0 C40,80 10,160 35,240 C60,320 10,400 35,480 C60,560 10,640 35,720 C60,800 15,800 15,800 L50,800 L50,0 Z" fill="#F8C8C0"/>
+    <path d="M20,0 C45,100 15,200 40,300 C65,400 15,500 40,600 C65,700 20,800 20,800 L50,800 L50,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
   </svg>
 </div>
 
@@ -22,7 +22,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 80px;
+    width: 60px;
     pointer-events: none;
     z-index: 1;
     overflow: visible;
