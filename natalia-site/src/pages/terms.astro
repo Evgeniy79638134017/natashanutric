@@ -3,11 +3,17 @@ import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout title="Пользовательское соглашение — Наталья Ерёменко" description="Пользовательское соглашение сайта нутрициолога Натальи Ерёменко. Условия использования сайта и услуг.">
-  <section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
-    <h1 class="font-display text-3xl font-bold text-primary-dark md:text-4xl">
-      Пользовательское соглашение
-    </h1>
-    <p class="mt-3 text-sm text-text-light">Дата вступления в силу: 4 февраля 2026 г.</p>
+  <div class="min-h-screen bg-white relative z-10">
+    <section class="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
+      <h1 class="font-display text-3xl font-bold text-primary-dark md:text-4xl">
+        Пользовательское соглашение
+      </h1>
+      <p class="mt-3 text-sm text-text-light">Дата вступления в силу: 4 февраля 2026 г.</p>
+
+      <a href="/docs/terms-of-use.pdf" download class="mt-6 inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Скачать PDF
+      </a>
 
     <div class="mt-10 space-y-10 text-base leading-relaxed text-text md:text-lg">
       <!-- 1. Общие положения -->
@@ -237,6 +243,7 @@ import PageLayout from '../layouts/PageLayout.astro';
           <p>Адрес: 676500, Амурская обл., г. Благовещенск</p>
         </div>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 </PageLayout>
