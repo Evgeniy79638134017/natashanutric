@@ -46,10 +46,11 @@ const {
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:py-16 lg:px-8">
-      <div class="lg:grid lg:grid-cols-3 lg:gap-12">
-        <!-- Main content -->
-        <div class="lg:col-span-2">
+    <section class="relative z-10 bg-white py-12 md:py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+          <!-- Main content -->
+          <div class="lg:col-span-2">
           <h1 class="font-display text-3xl font-bold text-primary-dark md:text-5xl" transition:name={slug ? `program-${slug}` : undefined}>
             {title}
           </h1>
@@ -58,7 +59,7 @@ const {
           </p>
 
           <!-- MDX content -->
-          <div class="prose mt-8 max-w-none text-text-light md:prose-lg">
+          <div class="prose mt-8 max-w-none md:prose-lg">
             <slot />
           </div>
 
@@ -152,9 +153,10 @@ const {
               Первая консультация — бесплатно
             </p>
           </div>
-        </aside>
+          </aside>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
   <Footer />
 </BaseLayout>

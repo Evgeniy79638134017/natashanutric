@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
 import MobileCTA from '../components/MobileCTA.astro';
+import VerticalWaves from '../components/VerticalWaves.astro';
 
 interface Props {
   title: string;
@@ -36,7 +37,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://example.
     <slot name="head" />
   </head>
   <body class="font-body text-text min-h-screen overflow-x-hidden pb-20 md:pb-0">
-    <slot />
+    <VerticalWaves />
+    <div class="relative z-[2]">
+      <slot />
+    </div>
     <MobileCTA />
     <script src="../scripts/scroll-animate.ts"></script>
   </body>

@@ -42,27 +42,29 @@ function formatDate(d: Date): string {
       </div>
     </div>
 
-    <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6 md:py-16 lg:px-8">
-      <time class="text-sm text-text-light" datetime={date.toISOString()}>
-        {formatDate(date)}
-      </time>
+    <section class="relative z-10 bg-white py-12 md:py-16">
+      <article class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <time class="text-sm text-text-light" datetime={date.toISOString()}>
+          {formatDate(date)}
+        </time>
 
-      <h1 class="mt-2 font-display text-3xl font-bold text-primary-dark md:text-5xl">
-        {title}
-      </h1>
+        <h1 class="mt-2 font-display text-3xl font-bold text-primary-dark md:text-5xl">
+          {title}
+        </h1>
 
-      <div class="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag: string) => (
-          <span class="rounded-full bg-badge-bg px-3 py-1 text-xs font-medium text-badge-text">
-            {tag}
-          </span>
-        ))}
-      </div>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag: string) => (
+            <span class="rounded-full bg-badge-bg px-3 py-1 text-xs font-medium text-badge-text">
+              {tag}
+            </span>
+          ))}
+        </div>
 
-      <div class="prose mt-8 max-w-none text-text-light prose-headings:font-display prose-headings:text-primary-dark prose-a:text-primary md:prose-lg">
-        <Content />
-      </div>
-    </article>
+        <div class="prose mt-8 max-w-none prose-headings:font-display prose-headings:text-primary-dark prose-a:text-primary md:prose-lg">
+          <Content />
+        </div>
+      </article>
+    </section>
 
     <CTA />
   </main>

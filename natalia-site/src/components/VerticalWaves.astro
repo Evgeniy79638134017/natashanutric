@@ -1,0 +1,72 @@
+---
+---
+<div class="vertical-waves-container">
+  <!-- Левая волна -->
+  <svg
+    class="vertical-wave vertical-wave-left"
+    viewBox="0 0 80 800"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M80,0 C50,100 80,200 50,300 C20,400 80,500 50,600 C20,700 80,800 50,800 L0,800 L0,0 Z"
+      fill="rgba(251,228,224,0.5)"
+    />
+    <path
+      d="M60,0 C30,120 60,220 30,320 C0,420 60,520 30,620 C0,720 60,800 30,800 L0,800 L0,0 Z"
+      fill="rgba(253,236,208,0.4)"
+    />
+  </svg>
+
+  <!-- Правая волна (зеркальная) -->
+  <svg
+    class="vertical-wave vertical-wave-right"
+    viewBox="0 0 80 800"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0,0 C30,100 0,200 30,300 C60,400 0,500 30,600 C60,700 0,800 30,800 L80,800 L80,0 Z"
+      fill="rgba(251,228,224,0.5)"
+    />
+    <path
+      d="M20,0 C50,120 20,220 50,320 C80,420 20,520 50,620 C80,720 20,800 50,800 L80,800 L80,0 Z"
+      fill="rgba(253,236,208,0.4)"
+    />
+  </svg>
+</div>
+
+<style>
+  .vertical-waves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .vertical-wave {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80px;
+  }
+
+  .vertical-wave-left {
+    left: 0;
+  }
+
+  .vertical-wave-right {
+    right: 0;
+  }
+
+  /* Скрыть на планшетах и мобильных */
+  @media (max-width: 1280px) {
+    .vertical-waves-container {
+      display: none;
+    }
+  }
+</style>

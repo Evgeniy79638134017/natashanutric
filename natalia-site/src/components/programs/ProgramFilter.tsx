@@ -30,12 +30,24 @@ const categoryColors: Record<string, string> = {
   weight: 'bg-orange-100 text-orange-700',
   energy: 'bg-yellow-100 text-yellow-700',
   stress: 'bg-purple-100 text-purple-700',
-  immunity: 'bg-blue-100 text-blue-700',
+  immunity: 'bg-green-100 text-green-700',
   detox: 'bg-emerald-100 text-emerald-700',
   beauty: 'bg-pink-100 text-pink-700',
   sleep: 'bg-indigo-100 text-indigo-700',
-  kids: 'bg-cyan-100 text-cyan-700',
-  other: 'bg-stone-100 text-stone-600',
+  kids: 'bg-sky-100 text-sky-700',
+  other: 'bg-gray-100 text-gray-700',
+};
+
+const categoryIcons: Record<string, string> = {
+  weight: '🔥',
+  energy: '⚡',
+  stress: '🧘',
+  immunity: '🛡️',
+  detox: '🌿',
+  beauty: '✨',
+  sleep: '😴',
+  kids: '👶',
+  other: '💊',
 };
 
 function getCategoryLabel(value: string): string {
@@ -74,6 +86,7 @@ export default function ProgramFilter({ programs }: Props) {
             key={program.id}
             className="group flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]"
           >
+            <span className="text-2xl mb-2 block">{categoryIcons[program.category] || '💊'}</span>
             <div className="flex items-start justify-between gap-3">
               <h3
                 className="font-display text-lg font-semibold text-[#2E4A3A]"
@@ -104,7 +117,7 @@ export default function ProgramFilter({ programs }: Props) {
 
             <a
               href={`/programs/${program.id}`}
-              className="mt-5 block rounded-full border-2 border-[#7CB59D] py-2.5 text-center text-sm font-semibold text-[#7CB59D] transition-all duration-300 hover:bg-[#7CB59D] hover:text-white group-hover:bg-[#7CB59D] group-hover:text-white group-hover:border-[#7CB59D]"
+              className="mt-5 block w-full rounded-full border-2 border-[#7CB59D] px-6 py-2.5 text-center text-sm font-semibold text-[#7CB59D] transition-all duration-300 hover:bg-[#7CB59D] hover:text-white group-hover:bg-[#7CB59D] group-hover:text-white group-hover:border-[#7CB59D]"
             >
               Подробнее
             </a>

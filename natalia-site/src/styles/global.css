@@ -62,6 +62,41 @@
   }
 }
 
+/* Prose styles for articles and programs */
+.prose {
+  color: #333333;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  color: #2E4A3A;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose h3 {
+  color: #2E4A3A;
+  margin-top: 1.5em;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+.prose strong {
+  color: #2E4A3A;
+  font-weight: 600;
+}
+
+.prose ul, .prose ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin: 0.5em 0;
+}
+
 /* Scroll animations */
 @media (prefers-reduced-motion: no-preference) {
   .animate-on-scroll {
