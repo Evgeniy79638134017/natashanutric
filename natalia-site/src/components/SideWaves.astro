@@ -1,18 +1,18 @@
 ---
 ---
-<!-- Левая волна — равномерная амплитуда ~30px по всей высоте -->
+<!-- Левая волна — начинается с края, быстро расширяется -->
 <div class="side-wave side-wave-left" aria-hidden="true">
-  <svg viewBox="0 0 50 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
-    <path d="M35,0 C10,80 40,160 15,240 C-10,320 40,400 15,480 C-10,560 40,640 15,720 C-10,800 35,800 35,800 L0,800 L0,0 Z" fill="#F8C8C0"/>
-    <path d="M30,0 C5,100 35,200 10,300 C-15,400 35,500 10,600 C-15,700 30,800 30,800 L0,800 L0,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
+  <svg viewBox="0 0 60 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M0,0 C40,50 10,100 50,160 C60,220 15,300 50,380 C60,460 20,540 45,620 C55,700 15,770 0,800 L0,0 Z" fill="#F8C8C0"/>
+    <path d="M0,0 C35,70 5,140 45,210 C55,280 10,380 45,480 C55,580 15,680 0,800 L0,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
   </svg>
 </div>
 
-<!-- Правая волна — зеркальная, равномерная амплитуда -->
+<!-- Правая волна — зеркальная -->
 <div class="side-wave side-wave-right" aria-hidden="true">
-  <svg viewBox="0 0 50 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
-    <path d="M15,0 C40,80 10,160 35,240 C60,320 10,400 35,480 C60,560 10,640 35,720 C60,800 15,800 15,800 L50,800 L50,0 Z" fill="#F8C8C0"/>
-    <path d="M20,0 C45,100 15,200 40,300 C65,400 15,500 40,600 C65,700 20,800 20,800 L50,800 L50,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
+  <svg viewBox="0 0 60 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <path d="M60,0 C20,50 50,100 10,160 C0,220 45,300 10,380 C0,460 40,540 15,620 C5,700 45,770 60,800 L60,0 Z" fill="#F8C8C0"/>
+    <path d="M60,0 C25,70 55,140 15,210 C5,280 50,380 15,480 C5,580 45,680 60,800 L60,0 Z" fill="#FDDCC0" fill-opacity="0.6"/>
   </svg>
 </div>
 
@@ -22,7 +22,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 60px;
+    width: 80px;
     pointer-events: none;
     z-index: 1;
     overflow: visible;
