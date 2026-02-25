@@ -35,9 +35,16 @@ function formatDate(date: Date): string {
               href={`/blog/${post.id}`}
               class="group flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-lg md:p-8"
             >
-              <time class="text-xs text-text-light" datetime={post.data.date.toISOString()}>
-                {formatDate(post.data.date)}
-              </time>
+              <div class="flex items-center gap-3">
+                <time class="text-xs text-text-light" datetime={post.data.date.toISOString()}>
+                  {formatDate(post.data.date)}
+                </time>
+                {post.data.category && (
+                  <span class="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary-dark">
+                    {post.data.category}
+                  </span>
+                )}
+              </div>
               <h2 class="mt-2 font-display text-lg font-bold text-primary-dark transition-colors group-hover:text-primary md:text-xl">
                 {post.data.title}
               </h2>
